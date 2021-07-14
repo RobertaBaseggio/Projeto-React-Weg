@@ -148,30 +148,29 @@ export const Form = styled.form`
 
 export const Cards = styled.div`
 
-    width: 85%;
+    width: 90%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    margin-left: 6rem;
-    margin-right: 10rem;
+    margin-left: 5.6rem;
 
     #cards{
-    width: 50%;
+    width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-top: 2rem;
     margin-bottom: 2rem;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    
     #card {
     background-color: #FFFFFF;
+    width: 45%;
     box-shadow: 5px 5px 5px rgb(0 0 0 / 0.2);
     height: 150px;
     margin: 1rem;
+    float: left;
     
         #barStatus{
         background-color: #EBB93A;
@@ -240,8 +239,6 @@ export const Cards = styled.div`
         height:80px;
         float:right;
         margin-right: 1rem;
-        margin-top: -20px
-        ;
 
 
             #status {
@@ -252,13 +249,13 @@ export const Cards = styled.div`
 
             div p:nth-child(1){
             font-weight: regular;
-            font-size: 16px;
+            font-size: 13px;
             cursor: pointer;
             }
 
             div p:nth-child(2){
             font-weight: bold;
-            font-size: 18px;
+            font-size: 14px;
             cursor: pointer;
             }
 
@@ -283,12 +280,101 @@ export const Notfications = styled.div`
     display: flex;
     justify-content: space-between;
 
+    #triangulo {
+    float: right;
+    margin-left: 66px;
+    margin-top: 110px;
+
+    width: 0;
+    height: 0;
+    border-left: 16px solid  #014C88;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    position:relative;
+    }
+
+    #triangulo:after{
+    float: right;
+    margin-right: 3px;
+    margin-top: -14px;
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 14px solid #FFFFFF;
+    border-top:14px solid transparent;
+    border-bottom: 14px solid transparent;
+    }
 
     img{
-        height: 35px;
-        width: 35px;
-        cursor: pointer;
-        margin: 15px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    margin: 15px;
+    }
+
+`;
+
+export const Menu = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    position : fixed;
+    right: 10px;
+    top: 290px;
+
+    ul{
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+
+    li{
+    height: 40px;
+    width: 40px;
+    padding: 2px;
+    margin: 4px 0;
+
+        a{ 
+        text-align: center;
+        line-height: 40px;
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        background: #00579D;
+
+            img{
+            height: 35px;
+            width: 35px;
+            cursor: pointer;
+            margin: 5px;
+            }
+
+            span {
+            width: 50px;
+            left: 40px;
+            padding: 0;
+            position: absolute;
+            overflow: hidden;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.6;
+            white-space: nowrap;
+            line-height: 40px;
+            transition: 0.25s;
+
+            &:hover {
+            width: auto;
+            padding: 0 20px;
+            overflow: visible;
+            }
+            
+            }
+
+            
         }
+    }
 
 `;
