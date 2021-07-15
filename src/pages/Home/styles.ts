@@ -319,61 +319,60 @@ export const Menu = styled.div`
     display: flex;
     flex-direction: column;
     position : fixed;
-    right: 10px;
+    right:0px;
     top: 290px;
-
-    ul{
-        list-style: none;
-        margin-bottom: 2rem;
+    height: 190px;
+    width: 150px;
+    margin: 0px;
+    
+    a:nth-child(1) {
+        top:0px;
+        
+        div {
+            background: #00579D;
+        }
     }
-
-    li{
-    height: 40px;
-    width: 40px;
-    padding: 2px;
-    margin: 4px 0;
-
-        a{ 
-        text-align: center;
-        line-height: 40px;
-        width: 50px;
-        height: 50px;
-        display: block;
-        text-decoration: none;
+    a:nth-child(2) {
+        top:60px;
+        div {
+            background: #0075B1;
+        }
+    }
+    a:nth-child(3) {
+        top:120px;
+        div {
+            background: #2382BA;
+        }
+    }
+    a {
         color: #fff;
-        background: #00579D;
+        text-decoration: none;
+        font-size: 8px;
+        position: relative;
+        position: absolute;
+        right: -110px;
 
-            img{
-            height: 35px;
-            width: 35px;
-            cursor: pointer;
-            margin: 5px;
-            }
-
-            span {
-            width: 50px;
-            left: 40px;
-            padding: 0;
-            position: absolute;
-            overflow: hidden;
-
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 0.6;
-            white-space: nowrap;
-            line-height: 40px;
-            transition: 0.25s;
-
-            &:hover {
-            width: auto;
-            padding: 0 20px;
-            overflow: visible;
-            }
+        div {
+            height: 50px;
+            width: 170px;
+            margin: 5%;
             
-            }
+            display: flex;
+            align-items: center;
+            padding: 5%;
 
-            
+            img {
+                height: 35px;
+                width: 35px;
+                background-size: cover;
+            }
+            h1 {
+                margin: 0% 10%;
+            }
+        }
+        &:hover {
+            right: 0;
+            transition: 0.5s;
         }
     }
 

@@ -8,6 +8,8 @@ import display2 from '../../Imagens/display2.svg';
 import notification from '../../Imagens/notification.svg';
 import avatar from '../../Imagens/Avatar.svg';
 import folder from '../../Imagens/folder.svg';
+import clock from '../../Imagens/clock.svg';
+import group from '../../Imagens/group.svg';
 
 const Home: React.FC = () => {
 
@@ -110,26 +112,24 @@ const Home: React.FC = () => {
         </div>
       </Cards>
       <Menu>
-        <ul> 
-          <li >
-            <a href="#">
-              <img src={folder} />
-              <span>Projetos</span>
-            </a>
-        </li>
-            {/* 
-            <li class="list-item">
-                <a class="about fa fa-info fa-fw" href="#">
-                    <span>About</span>
-                </a>
-            </li>
-            <li class="list-item">
-                <a class="services fa fa-wrench fa-fw" href="#">
-                    <span>Services</span>
-                </a>
-            </li>
-          */}
-        </ul>
+        <a href="">
+          <div>
+            <img src={ clock }/>
+            <h1>Aprovação</h1>
+          </div>
+        </a>
+        <a href="">
+          <div>
+            <img src={ folder }/>
+            <h1>Projetos</h1>
+          </div>
+        </a>
+        <a href="">
+          <div>
+            <img src={ group }/>
+            <h1>Consultores</h1>
+          </div>
+        </a>
       </Menu>
     </>
   )
